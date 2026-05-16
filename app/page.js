@@ -168,7 +168,47 @@ function Service({ icon, title, text, link }) {
       <div style={serviceIcon}>{icon}</div>
       <h3 style={cardTitle}>{title}</h3>
       <p style={cardText}>{text}</p>
-      <p style={moreLink}>{link}</p>
+
+      <details style={detailsBox}>
+        <summary style={moreLink}>Подробнее →</summary>
+        <div style={detailsText}>
+          {title === 'Наставничество для бухгалтеров' && (
+            <ul>
+              <li>Разбор 1С, первичных документов и отчётности.</li>
+              <li>Практические задания и проверка результата.</li>
+              <li>Поддержка начинающего бухгалтера до уверенности.</li>
+              <li>Подготовка к собеседованию и первой работе.</li>
+            </ul>
+          )}
+
+          {title === 'Бухгалтерские услуги для бизнеса' && (
+            <ul>
+              <li>Ведение ИП и ООО.</li>
+              <li>УСН, зарплата, отчётность, контроль налогов.</li>
+              <li>Проверка учёта и поиск ошибок.</li>
+              <li>Сопровождение руководителя понятным языком.</li>
+            </ul>
+          )}
+
+          {title === 'Налоговые консультации' && (
+            <ul>
+              <li>Разбор УСН, НДС, зарплаты и налоговой нагрузки.</li>
+              <li>Ответы на требования ИФНС и СФР.</li>
+              <li>Оценка налоговых рисков.</li>
+              <li>Пошаговый план действий.</li>
+            </ul>
+          )}
+
+          {title === 'Помощь при проверках' && (
+            <ul>
+              <li>Подготовка пояснений и документов.</li>
+              <li>Анализ требований контролирующих органов.</li>
+              <li>Помощь в формулировках ответов.</li>
+              <li>Сопровождение до закрытия вопроса.</li>
+            </ul>
+          )}
+        </div>
+      </details>
     </div>
   );
 }
@@ -499,7 +539,24 @@ const cardText = {
 const moreLink = {
   color: gold,
   fontWeight: '800',
-  marginTop: '22px'
+  marginTop: '22px',
+  cursor: 'pointer',
+  listStyle: 'none'
+};
+
+const detailsBox = {
+  marginTop: '18px'
+};
+
+const detailsText = {
+  marginTop: '14px',
+  color: '#334155',
+  fontSize: '15px',
+  lineHeight: '1.7',
+  background: '#f8fafc',
+  padding: '16px',
+  borderRadius: '14px',
+  border: '1px solid #e5e7eb'
 };
 
 const darkPanelSection = {
@@ -690,4 +747,5 @@ const footerLink = {
   color: '#cbd5e1',
   margin: '8px 0'
 };
+
 
