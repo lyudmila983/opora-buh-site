@@ -1,186 +1,220 @@
 export default function Home() {
   return (
-    <main style={{ fontFamily: 'Arial, sans-serif', color: '#0f172a', background: '#f8fafc' }}>
-      <section style={heroSection}>
-        <div style={navBar}>
-          <div style={logoBox}>
-            <img src="/logo.png" alt="ОПОРА" style={{ width: '170px', height: 'auto', display: 'block' }} />
-          </div>
-          <nav style={navLinks}>
+    <main style={{ fontFamily: 'Arial, sans-serif', background: '#f8fafc', color: '#0b1f3a' }}>
+      <section style={hero}>
+        <header style={header}>
+          <a href="#top" style={logoWrap}>
+            <img src="/logo.png" alt="ОПОРА" style={logoImg} />
+          </a>
+
+          <nav style={nav}>
+            <a href="#top" style={navLink}>Главная</a>
             <a href="#services" style={navLink}>Услуги</a>
             <a href="#benefits" style={navLink}>Преимущества</a>
             <a href="#about" style={navLink}>Обо мне</a>
             <a href="#contacts" style={navLink}>Контакты</a>
           </nav>
-          <a href="#contacts" style={navButton}>Записаться</a>
-        </div>
 
-        <div style={heroGrid}>
+          <a href="#contacts" style={topButton}>Записаться на консультацию</a>
+        </header>
+
+        <div id="top" style={heroGrid}>
           <div>
-            <p style={eyebrow}>Наставничество • Бухгалтерские услуги • Помощь бизнесу</p>
+            <p style={goldText}>Наставничество • Бухгалтерские услуги • Помощь бизнесу</p>
             <h1 style={heroTitle}>Опора бухгалтеру — практическая помощь в учёте, налогах и уверенном старте в профессии</h1>
-            <div style={goldLine}></div>
-            <p style={heroText}>
+            <div style={smallGoldLine}></div>
+            <p style={heroLead}>
               Помогаю начинающим бухгалтерам освоить практику, а предпринимателям и организациям — разобраться в учёте, налогах, отчётности и требованиях контролирующих органов.
             </p>
-            <div style={{ marginTop: '32px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-              <a href="#contacts" style={buttonGold}>Записаться на консультацию</a>
-              <a href="#services" style={buttonOutline}>Посмотреть услуги</a>
+
+            <div style={buttonRow}>
+              <a href="#contacts" style={goldButton}>📅 Записаться на консультацию</a>
+              <a href="#services" style={outlineButton}>📋 Посмотреть услуги</a>
             </div>
-            <div style={trustRow}>
-              <Trust title="Опыт и практика" text="Реальные кейсы и решения" />
-              <Trust title="Понятно" text="Объясняю простым языком" />
-              <Trust title="Надёжно" text="Конфиденциальность и поддержка" />
+
+            <div style={trustGrid}>
+              <Trust icon="🛡️" title="Опыт и практика" text="Реальные кейсы и решения" />
+              <Trust icon="✅" title="Понятно и доступно" text="Объясняю сложное простым языком" />
+              <Trust icon="🔒" title="Конфиденциальность" text="Ваши данные под защитой" />
             </div>
           </div>
 
-          <div style={heroCard}>
-            <div style={heroCardInner}>
+          <div style={heroImageBox}>
+            <div style={notebookScene}>
+              <div style={plant}></div>
+              <div style={calculator}></div>
               <div style={notebook}>
-                <img src="/logo.png" alt="ОПОРА" style={{ width: '230px', height: 'auto', display: 'block', margin: '0 auto' }} />
-                <p style={{ color: '#d4af37', textAlign: 'center', marginTop: '18px', fontWeight: 'bold' }}>Уверенность в профессии</p>
+                <img src="/logo.png" alt="ОПОРА" style={notebookLogo} />
               </div>
+              <div style={pen}></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="services" style={sectionStyle}>
-        <h2 style={h2}>Услуги</h2>
-        <p style={lead}>Выберите формат помощи под вашу задачу.</p>
-        <div style={grid4}>
-          <Card icon="📘" title="Наставничество для бухгалтеров" text="Практика, разбор кейсов, поддержка и ответы на вопросы." price="от 20 000 ₽" />
-          <Card icon="🧾" title="Бухгалтерские услуги для бизнеса" text="Ведение учёта, расчёт налогов, подготовка и сдача отчётности." price="от 10 000 ₽" />
-          <Card icon="📊" title="Налоговые консультации" text="УСН, НДС, зарплата, 1С, требования ИФНС и СФР." price="от 5 000 ₽" />
-          <Card icon="👥" title="Подбор бухгалтера" text="Оценка кандидатов, адаптация и контроль практических навыков." price="от 50 000 ₽" />
+      <section id="services" style={whiteSection}>
+        <div style={container}>
+          <h2 style={sectionTitle}>Услуги</h2>
+          <div style={titleLine}></div>
+          <p style={sectionLead}>Выберите формат помощи под вашу задачу</p>
+
+          <div style={cardsGrid}>
+            <Service icon="📖" title="Наставничество для бухгалтеров" text="Практика, разбор кейсов, поддержка и ответы на вопросы." link="Подробнее →" />
+            <Service icon="🧮" title="Бухгалтерские услуги для бизнеса" text="Ведение учёта, расчёт налогов, подготовка и сдача отчётности." link="Подробнее →" />
+            <Service icon="📑" title="Налоговые консультации" text="Снижение налоговых рисков, выбор оптимального режима налогообложения." link="Подробнее →" />
+            <Service icon="👤" title="Помощь при проверках" text="Подготовка документов, сопровождение и защита ваших интересов." link="Подробнее →" />
+          </div>
         </div>
       </section>
 
-      <section id="benefits" style={{ ...sectionStyle, background: 'white' }}>
-        <h2 style={h2}>Почему выбирают «ОПОРУ»</h2>
-        <div style={grid3}>
-          <Info title="Для начинающих бухгалтеров" items={["Практика после учёбы", "Разбор 1С и первички", "Подготовка к работе", "Поддержка наставника"]} />
-          <Info title="Для предпринимателей" items={["Проверка учёта", "Ответы на требования", "Налоговые риски", "Понятный план действий"]} />
-          <Info title="Для работодателей" items={["Подбор специалиста", "Проверка компетенций", "Адаптация бухгалтера", "Экономия времени"]} />
+      <section id="benefits" style={darkPanelSection}>
+        <div style={darkPanel}>
+          <h2 style={{ ...sectionTitle, color: 'white' }}>Почему выбирают меня</h2>
+          <div style={titleLine}></div>
+          <div style={benefitGrid}>
+            <Benefit icon="⭐" title="Практический опыт" text="Более 20 лет работы в бухгалтерии и финансах разных компаний." />
+            <Benefit icon="🎯" title="Индивидуальный подход" text="Решения под вашу ситуацию, без шаблонов и лишней теории." />
+            <Benefit icon="📈" title="Результат и уверенность" text="Помогаю навести порядок в учёте и принимать верные решения." />
+            <Benefit icon="🏅" title="Честность и надёжность" text="Работаю открыто, соблюдаю сроки и договорённости." />
+          </div>
         </div>
       </section>
 
-      <section id="about" style={sectionStyle}>
-        <div style={aboutBlock}>
+      <section style={ctaSection}>
+        <div style={ctaIcon}>📅</div>
+        <div>
+          <h2 style={ctaTitle}>Нужна помощь бухгалтеру или вашему бизнесу?</h2>
+          <p style={ctaText}>Запишитесь на консультацию — разберём вашу задачу и найдём лучшее решение.</p>
+        </div>
+        <a href="#contacts" style={goldButton}>Записаться на консультацию</a>
+      </section>
+
+      <section id="about" style={aboutSection}>
+        <div style={aboutPhoto}>👩‍💼</div>
+        <div>
+          <h2 style={sectionTitle}>Обо мне</h2>
+          <div style={titleLine}></div>
+          <p style={aboutText}>
+            Я — практикующий бухгалтер и наставник. Помогаю начинающим специалистам уверенно развиваться в профессии, а бизнесу — выстроить надёжный учёт и снизить налоговые риски. В своей работе ценю точность, ответственность и доверие клиентов.
+          </p>
+          <a href="#contacts" style={outlineGoldButton}>Подробнее обо мне</a>
+        </div>
+        <div style={statsColumn}>
+          <Stat number="20+" text="лет практического опыта" />
+          <Stat number="300+" text="довольных клиентов" />
+          <Stat number="1000+" text="успешных консультаций" />
+        </div>
+      </section>
+
+      <section id="contacts" style={contactSection}>
+        <div style={container}>
+          <h2 style={{ ...sectionTitle, color: 'white' }}>Контакты</h2>
+          <p style={{ ...sectionLead, color: '#dbeafe' }}>Свяжитесь удобным способом — помогу разобраться в вашей ситуации.</p>
+          <div style={contactGrid}>
+            <Contact label="Телефон" value="+7 (906) 416-86-08" />
+            <Contact label="MAX" value="+7 (906) 416-86-08" />
+            <Contact label="Город" value="Таганрог" />
+          </div>
+        </div>
+      </section>
+
+      <footer style={footer}>
+        <div style={footerGrid}>
           <div>
-            <h2 style={h2}>Обо мне</h2>
-            <p style={lead}>
-              Меня зовут Людмила. Я практикующий главный бухгалтер с большим опытом работы. Помогаю бухгалтерам расти в профессии, а бизнесу — уверенно разбираться в учёте, налогах и отчётности.
-            </p>
-            <div style={statsGrid}>
-              <Stat number="20+" text="лет практики" />
-              <Stat number="1С" text="практический учёт" />
-              <Stat number="ИФНС/СФР" text="ответы на требования" />
-            </div>
+            <img src="/logo.png" alt="ОПОРА" style={{ width: '150px', height: 'auto' }} />
+            <p style={footerText}>Практическая помощь в учёте, налогах и уверенном старте в профессии.</p>
           </div>
-        </div>
-      </section>
-
-      <section style={{ ...sectionStyle, background: '#0f172a', color: 'white' }}>
-        <h2 style={{ ...h2, color: 'white' }}>Тарифы</h2>
-        <div style={grid3}>
-          <Tariff title="Старт" price="20 000 ₽" text="1 месяц наставничества для начинающего бухгалтера." />
-          <Tariff title="Практик" price="50 000 ₽" text="3 месяца сопровождения, кейсы, 1С и отчётность." />
-          <Tariff title="Профессионал" price="90 000 ₽" text="6 месяцев поддержки до уверенной самостоятельной работы." />
-        </div>
-      </section>
-
-      <section id="contacts" style={sectionStyle}>
-        <div style={contactCard}>
-          <h2 style={h2}>Записаться на консультацию</h2>
-          <p style={lead}>Напишите, какая у вас задача: наставничество, консультация для бизнеса или подбор бухгалтера.</p>
-          <div style={{ marginTop: '24px', display: 'grid', gap: '12px', fontSize: '18px' }}>
-            <p><strong>Телефон:</strong> +7 (906) 416-86-08</p>
-            <p><strong>MAX:</strong> +7 (906) 416-86-08</p>
-            <p><strong>Город:</strong> Таганрог</p>
+          <div>
+            <h4 style={footerTitle}>Навигация</h4>
+            <p style={footerLink}>Главная</p>
+            <p style={footerLink}>Услуги</p>
+            <p style={footerLink}>Преимущества</p>
+            <p style={footerLink}>Обо мне</p>
           </div>
-          <a href="tel:+79064168608" style={{ ...buttonGold, display: 'inline-block', marginTop: '18px' }}>Позвонить</a>
-        </div>
-      </section>
-
-      <footer style={{ background: '#0f172a', color: '#cbd5e1' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '40px 24px' }}>
-          <img src="/logo.png" alt="ОПОРА" style={{ width: '140px', height: 'auto', display: 'block', marginBottom: '20px' }} />
-          <h3 style={{ color: 'white', marginTop: 0 }}>Правовая информация</h3>
-          <p style={{ ...p, color: '#cbd5e1' }}>Используя сайт, вы соглашаетесь с условиями обработки персональных данных.</p>
-          <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginTop: '12px' }}>
-            <a href="#" style={{ color: '#93c5fd', textDecoration: 'none' }}>Политика конфиденциальности</a>
-            <a href="#" style={{ color: '#93c5fd', textDecoration: 'none' }}>Согласие на обработку персональных данных</a>
+          <div>
+            <h4 style={footerTitle}>Услуги</h4>
+            <p style={footerLink}>Наставничество</p>
+            <p style={footerLink}>Бухгалтерские услуги</p>
+            <p style={footerLink}>Налоговые консультации</p>
+            <p style={footerLink}>Помощь при проверках</p>
           </div>
-          <p style={{ ...p, color: '#94a3b8', marginTop: '20px', fontSize: '14px' }}>© {new Date().getFullYear()} Опора бухгалтеру. Все права защищены.</p>
+          <div>
+            <h4 style={footerTitle}>Правовая информация</h4>
+            <p style={footerLink}>Политика конфиденциальности</p>
+            <p style={footerLink}>Согласие на обработку персональных данных</p>
+            <p style={footerLink}>© {new Date().getFullYear()} ОПОРА</p>
+          </div>
         </div>
       </footer>
     </main>
   );
 }
 
-function Trust({ title, text }) {
+function Trust({ icon, title, text }) {
   return (
     <div style={trustItem}>
-      <div style={trustIcon}>✓</div>
+      <div style={trustIcon}>{icon}</div>
       <div>
         <strong>{title}</strong>
-        <p style={{ margin: '4px 0 0', color: '#dbeafe', fontSize: '14px' }}>{text}</p>
+        <p style={trustText}>{text}</p>
       </div>
     </div>
   );
 }
 
-function Card({ icon, title, text, price }) {
+function Service({ icon, title, text, link }) {
   return (
-    <div style={card}>
+    <div style={serviceCard}>
       <div style={serviceIcon}>{icon}</div>
-      <h3 style={h3}>{title}</h3>
-      <p style={p}>{text}</p>
-      <div style={priceStyle}>{price}</div>
+      <h3 style={cardTitle}>{title}</h3>
+      <p style={cardText}>{text}</p>
+      <p style={moreLink}>{link}</p>
     </div>
   );
 }
 
-function Info({ title, items }) {
+function Benefit({ icon, title, text }) {
   return (
-    <div style={card}>
-      <h3 style={h3}>{title}</h3>
-      <ul style={{ paddingLeft: '20px', lineHeight: '1.9' }}>
-        {items.map((item) => <li key={item}>{item}</li>)}
-      </ul>
+    <div style={benefitItem}>
+      <div style={benefitIcon}>{icon}</div>
+      <h3 style={benefitTitle}>{title}</h3>
+      <p style={benefitText}>{text}</p>
     </div>
   );
 }
 
 function Stat({ number, text }) {
   return (
-    <div style={{ ...card, textAlign: 'center', boxShadow: 'none' }}>
-      <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1d4ed8' }}>{number}</div>
-      <p style={p}>{text}</p>
+    <div style={statItem}>
+      <div style={statNumber}>{number}</div>
+      <p style={statText}>{text}</p>
     </div>
   );
 }
 
-function Tariff({ title, price, text }) {
+function Contact({ label, value }) {
   return (
-    <div style={{ ...card, background: '#111827', color: 'white', border: '1px solid #334155' }}>
-      <h3 style={{ ...h3, color: 'white' }}>{title}</h3>
-      <div style={{ fontSize: '30px', fontWeight: 'bold', marginBottom: '16px', color: '#facc15' }}>{price}</div>
-      <p style={{ ...p, color: '#cbd5e1' }}>{text}</p>
+    <div style={contactCard}>
+      <strong>{label}</strong>
+      <p>{value}</p>
     </div>
   );
 }
 
-const heroSection = {
-  padding: '28px 24px 70px',
-  background: 'radial-gradient(circle at 80% 20%, #1e40af 0, #172554 38%, #0f172a 100%)',
-  color: 'white'
+const navy = '#061a3a';
+const navy2 = '#0b2b5c';
+const gold = '#d4af37';
+const goldLight = '#f7d77a';
+
+const hero = {
+  background: `radial-gradient(circle at 80% 20%, ${navy2}, ${navy} 65%)`,
+  color: 'white',
+  padding: '26px 34px 70px'
 };
 
-const navBar = {
-  maxWidth: '1200px',
-  margin: '0 auto 55px',
+const header = {
+  maxWidth: '1280px',
+  margin: '0 auto 58px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -188,239 +222,472 @@ const navBar = {
   flexWrap: 'wrap'
 };
 
-const logoBox = {
-  background: 'white',
-  padding: '10px 18px',
-  borderRadius: '18px',
-  boxShadow: '0 14px 35px rgba(0,0,0,0.20)'
+const logoWrap = {
+  display: 'block',
+  textDecoration: 'none'
 };
 
-const navLinks = {
+const logoImg = {
+  width: '150px',
+  height: 'auto',
+  display: 'block'
+};
+
+const nav = {
   display: 'flex',
-  gap: '28px',
-  flexWrap: 'wrap',
-  fontWeight: 'bold'
+  alignItems: 'center',
+  gap: '34px',
+  flexWrap: 'wrap'
 };
 
 const navLink = {
   color: 'white',
-  textDecoration: 'none'
+  textDecoration: 'none',
+  fontWeight: '700',
+  fontSize: '16px'
 };
 
-const navButton = {
-  background: 'linear-gradient(135deg, #fde68a, #d4af37)',
-  color: '#0f172a',
-  padding: '14px 22px',
-  borderRadius: '16px',
+const topButton = {
+  background: `linear-gradient(135deg, ${goldLight}, ${gold})`,
+  color: navy,
   textDecoration: 'none',
-  fontWeight: 'bold'
+  fontWeight: '800',
+  padding: '18px 28px',
+  borderRadius: '16px',
+  boxShadow: '0 10px 28px rgba(212,175,55,0.28)'
 };
 
 const heroGrid = {
-  maxWidth: '1200px',
+  maxWidth: '1280px',
   margin: '0 auto',
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-  gap: '48px',
+  gridTemplateColumns: 'minmax(320px, 1fr) minmax(320px, 520px)',
+  gap: '60px',
   alignItems: 'center'
 };
 
-const eyebrow = {
-  fontSize: '17px',
-  color: '#facc15',
-  marginBottom: '18px'
+const goldText = {
+  color: goldLight,
+  fontSize: '18px',
+  margin: '0 0 18px'
 };
 
 const heroTitle = {
-  fontSize: 'clamp(38px, 6vw, 62px)',
-  lineHeight: '1.08',
-  margin: '0 0 20px',
-  maxWidth: '820px'
+  fontSize: 'clamp(38px, 5vw, 62px)',
+  lineHeight: '1.12',
+  margin: '0',
+  fontWeight: '900',
+  letterSpacing: '-1px'
 };
 
-const goldLine = {
+const smallGoldLine = {
   width: '80px',
   height: '4px',
-  background: '#d4af37',
-  borderRadius: '999px',
-  marginBottom: '24px'
+  background: gold,
+  margin: '22px 0',
+  borderRadius: '999px'
 };
 
-const heroText = {
+const heroLead = {
   fontSize: '20px',
   lineHeight: '1.7',
-  maxWidth: '760px',
-  color: '#e0f2fe'
+  color: '#e5efff',
+  maxWidth: '760px'
 };
 
-const heroCard = {
-  border: '3px solid #d4af37',
-  borderRadius: '28px',
-  padding: '14px',
-  background: 'rgba(255,255,255,0.06)',
-  boxShadow: '0 20px 50px rgba(0,0,0,0.25)'
-};
-
-const heroCardInner = {
-  minHeight: '410px',
-  borderRadius: '20px',
-  background: 'linear-gradient(135deg, #f8fafc, #e2e8f0)',
+const buttonRow = {
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: '30px'
+  gap: '18px',
+  flexWrap: 'wrap',
+  marginTop: '32px'
 };
 
-const notebook = {
-  width: '82%',
-  minHeight: '250px',
-  background: '#102a5c',
-  borderRadius: '20px',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  boxShadow: '0 25px 55px rgba(15,23,42,0.35)',
-  border: '2px solid #d4af37',
-  padding: '26px'
+const goldButton = {
+  background: `linear-gradient(135deg, ${goldLight}, ${gold})`,
+  color: navy,
+  textDecoration: 'none',
+  fontWeight: '800',
+  padding: '17px 28px',
+  borderRadius: '14px',
+  display: 'inline-block',
+  boxShadow: '0 10px 28px rgba(212,175,55,0.25)'
 };
 
-const trustRow = {
+const outlineButton = {
+  color: 'white',
+  textDecoration: 'none',
+  fontWeight: '800',
+  padding: '16px 28px',
+  borderRadius: '14px',
+  border: `2px solid ${gold}`,
+  display: 'inline-block'
+};
+
+const trustGrid = {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
   gap: '18px',
-  marginTop: '40px'
+  marginTop: '46px'
 };
 
 const trustItem = {
   display: 'flex',
-  gap: '12px',
+  gap: '14px',
   alignItems: 'flex-start',
-  color: 'white',
-  borderRight: '1px solid rgba(255,255,255,0.18)',
-  paddingRight: '16px'
+  paddingRight: '16px',
+  borderRight: '1px solid rgba(255,255,255,0.18)'
 };
 
 const trustIcon = {
-  width: '34px',
-  height: '34px',
-  borderRadius: '50%',
-  border: '2px solid #d4af37',
+  color: goldLight,
+  fontSize: '30px'
+};
+
+const trustText = {
+  margin: '6px 0 0',
+  color: '#dbeafe',
+  lineHeight: '1.45',
+  fontSize: '15px'
+};
+
+const heroImageBox = {
+  border: `4px solid ${gold}`,
+  borderRadius: '24px',
+  overflow: 'hidden',
+  minHeight: '470px',
+  background: '#eef2f7',
+  boxShadow: '0 22px 55px rgba(0,0,0,0.35)'
+};
+
+const notebookScene = {
+  position: 'relative',
+  height: '470px',
+  background: 'linear-gradient(135deg, #f8fafc, #dbe3ef)',
+  overflow: 'hidden'
+};
+
+const notebook = {
+  position: 'absolute',
+  width: '330px',
+  height: '420px',
+  right: '90px',
+  top: '55px',
+  background: 'linear-gradient(135deg, #061a3a, #14346d)',
+  borderRadius: '18px',
+  transform: 'rotate(-14deg)',
+  boxShadow: '0 26px 55px rgba(15,23,42,0.45)',
+  border: '2px solid rgba(212,175,55,0.65)',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
-  color: '#facc15',
-  fontWeight: 'bold'
+  justifyContent: 'center'
 };
 
-const sectionStyle = {
+const notebookLogo = {
+  width: '230px',
+  transform: 'rotate(0deg)',
+  filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.2))'
+};
+
+const plant = {
+  position: 'absolute',
+  width: '140px',
+  height: '140px',
+  left: '20px',
+  top: '20px',
+  borderRadius: '50%',
+  background: 'radial-gradient(circle, #14532d, #86efac 45%, transparent 48%)',
+  opacity: 0.75
+};
+
+const calculator = {
+  position: 'absolute',
+  width: '170px',
+  height: '250px',
+  right: '-35px',
+  top: '80px',
+  borderRadius: '18px',
+  background: 'repeating-linear-gradient(0deg, #111827, #111827 28px, #374151 30px)',
+  transform: 'rotate(18deg)',
+  opacity: 0.9
+};
+
+const pen = {
+  position: 'absolute',
+  width: '250px',
+  height: '16px',
+  right: '10px',
+  bottom: '55px',
+  background: `linear-gradient(90deg, ${gold}, ${goldLight}, #8a6b12)`,
+  borderRadius: '999px',
+  transform: 'rotate(-22deg)',
+  boxShadow: '0 8px 18px rgba(0,0,0,0.25)'
+};
+
+const whiteSection = {
+  background: '#f8fafc',
+  padding: '64px 28px 78px'
+};
+
+const container = {
   maxWidth: '1200px',
-  margin: '0 auto',
-  padding: '70px 24px'
+  margin: '0 auto'
 };
 
-const h2 = {
-  fontSize: '38px',
-  margin: '0 0 14px',
-  color: '#0f172a'
+const sectionTitle = {
+  fontSize: '42px',
+  margin: '0',
+  textAlign: 'center',
+  color: navy,
+  fontWeight: '900'
 };
 
-const h3 = {
-  fontSize: '22px',
-  margin: '0 0 14px',
-  color: '#0f172a'
+const titleLine = {
+  width: '58px',
+  height: '4px',
+  background: gold,
+  borderRadius: '999px',
+  margin: '14px auto 16px'
 };
 
-const lead = {
-  fontSize: '18px',
-  color: '#64748b',
-  marginBottom: '32px',
-  lineHeight: '1.6'
-};
-
-const p = {
+const sectionLead = {
+  textAlign: 'center',
   color: '#475569',
-  lineHeight: '1.7',
-  fontSize: '16px'
+  fontSize: '18px',
+  margin: '0 0 42px'
 };
 
-const card = {
+const cardsGrid = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(245px, 1fr))',
+  gap: '28px'
+};
+
+const serviceCard = {
   background: 'white',
-  padding: '28px',
-  borderRadius: '22px',
-  boxShadow: '0 10px 25px rgba(15,23,42,0.08)',
+  borderRadius: '18px',
+  padding: '34px 30px',
+  minHeight: '260px',
+  boxShadow: '0 16px 40px rgba(15,23,42,0.10)',
   border: '1px solid #e5e7eb'
 };
 
 const serviceIcon = {
-  width: '54px',
-  height: '54px',
-  borderRadius: '16px',
-  background: '#eff6ff',
+  width: '56px',
+  height: '56px',
+  borderRadius: '50%',
+  background: '#f3ead2',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   fontSize: '28px',
-  marginBottom: '18px'
+  marginBottom: '22px'
 };
 
-const grid3 = {
+const cardTitle = {
+  fontSize: '22px',
+  color: navy,
+  margin: '0 0 14px',
+  lineHeight: '1.3'
+};
+
+const cardText = {
+  color: '#334155',
+  fontSize: '16px',
+  lineHeight: '1.65'
+};
+
+const moreLink = {
+  color: gold,
+  fontWeight: '800',
+  marginTop: '22px'
+};
+
+const darkPanelSection = {
+  background: '#f8fafc',
+  padding: '0 28px 64px'
+};
+
+const darkPanel = {
+  maxWidth: '1200px',
+  margin: '0 auto',
+  background: `linear-gradient(135deg, ${navy}, ${navy2})`,
+  borderRadius: '18px',
+  padding: '46px 34px',
+  color: 'white'
+};
+
+const benefitGrid = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-  gap: '22px'
+  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+  gap: '28px',
+  marginTop: '36px'
 };
 
-const grid4 = {
+const benefitItem = {
+  textAlign: 'center',
+  padding: '0 18px',
+  borderRight: '1px solid rgba(255,255,255,0.18)'
+};
+
+const benefitIcon = {
+  fontSize: '42px',
+  color: goldLight,
+  marginBottom: '14px'
+};
+
+const benefitTitle = {
+  color: 'white',
+  fontSize: '19px',
+  margin: '0 0 10px'
+};
+
+const benefitText = {
+  color: '#dbeafe',
+  lineHeight: '1.55',
+  fontSize: '15px'
+};
+
+const ctaSection = {
+  maxWidth: '1200px',
+  margin: '0 auto 64px',
+  background: `linear-gradient(135deg, ${navy}, ${navy2})`,
+  borderRadius: '18px',
+  padding: '42px 34px',
+  color: 'white',
+  display: 'grid',
+  gridTemplateColumns: '90px 1fr auto',
+  gap: '28px',
+  alignItems: 'center'
+};
+
+const ctaIcon = {
+  width: '80px',
+  height: '80px',
+  borderRadius: '50%',
+  background: 'rgba(212,175,55,0.18)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: '38px'
+};
+
+const ctaTitle = {
+  margin: '0 0 10px',
+  fontSize: '30px'
+};
+
+const ctaText = {
+  color: '#dbeafe',
+  margin: 0,
+  fontSize: '17px'
+};
+
+const aboutSection = {
+  maxWidth: '1200px',
+  margin: '0 auto',
+  padding: '20px 28px 80px',
+  display: 'grid',
+  gridTemplateColumns: '240px 1fr 220px',
+  gap: '42px',
+  alignItems: 'center'
+};
+
+const aboutPhoto = {
+  width: '220px',
+  height: '220px',
+  borderRadius: '50%',
+  background: 'linear-gradient(135deg, #e5e7eb, #ffffff)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: '90px',
+  boxShadow: '0 16px 35px rgba(15,23,42,0.12)'
+};
+
+const aboutText = {
+  color: '#334155',
+  fontSize: '17px',
+  lineHeight: '1.75'
+};
+
+const outlineGoldButton = {
+  color: gold,
+  border: `2px solid ${gold}`,
+  borderRadius: '12px',
+  padding: '13px 22px',
+  display: 'inline-block',
+  textDecoration: 'none',
+  fontWeight: '800',
+  marginTop: '10px'
+};
+
+const statsColumn = {
+  display: 'grid',
+  gap: '18px'
+};
+
+const statItem = {
+  borderBottom: '1px solid #dbe3ef',
+  paddingBottom: '14px'
+};
+
+const statNumber = {
+  color: gold,
+  fontSize: '34px',
+  fontWeight: '900'
+};
+
+const statText = {
+  color: '#334155',
+  margin: '6px 0 0'
+};
+
+const contactSection = {
+  background: `linear-gradient(135deg, ${navy}, ${navy2})`,
+  color: 'white',
+  padding: '60px 28px'
+};
+
+const contactGrid = {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
   gap: '22px'
 };
 
-const statsGrid = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))',
-  gap: '16px',
-  marginTop: '24px'
-};
-
-const aboutBlock = {
-  background: 'white',
-  padding: '36px',
-  borderRadius: '26px',
-  boxShadow: '0 12px 28px rgba(15,23,42,0.08)'
-};
-
 const contactCard = {
-  background: 'white',
-  padding: '38px',
-  borderRadius: '26px',
-  boxShadow: '0 12px 30px rgba(15,23,42,0.10)',
-  borderTop: '5px solid #d4af37'
-};
-
-const priceStyle = {
-  marginTop: '20px',
-  fontSize: '24px',
-  fontWeight: 'bold',
-  color: '#1d4ed8'
-};
-
-const buttonGold = {
-  background: 'linear-gradient(135deg, #fde68a, #d4af37)',
-  color: '#0f172a',
-  padding: '16px 24px',
+  background: 'rgba(255,255,255,0.08)',
+  border: '1px solid rgba(255,255,255,0.14)',
   borderRadius: '16px',
-  textDecoration: 'none',
-  fontWeight: 'bold',
-  boxShadow: '0 12px 30px rgba(212,175,55,0.30)'
+  padding: '24px',
+  color: 'white'
 };
 
-const buttonOutline = {
-  background: 'transparent',
-  color: '#ffffff',
-  padding: '16px 24px',
-  borderRadius: '16px',
-  textDecoration: 'none',
-  fontWeight: 'bold',
-  border: '1px solid rgba(255,255,255,0.55)'
+const footer = {
+  background: '#06142d',
+  color: '#cbd5e1',
+  padding: '46px 28px 26px'
 };
+
+const footerGrid = {
+  maxWidth: '1200px',
+  margin: '0 auto',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))',
+  gap: '32px'
+};
+
+const footerText = {
+  color: '#cbd5e1',
+  lineHeight: '1.6'
+};
+
+const footerTitle = {
+  color: 'white',
+  marginTop: 0
+};
+
+const footerLink = {
+  color: '#cbd5e1',
+  margin: '8px 0'
+};
+
