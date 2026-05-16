@@ -141,11 +141,21 @@ export default function Home() {
           <div>
             <h4 style={footerTitle}>Правовая информация</h4>
             <a href="/privacy.pdf" target="_blank" style={footerLink}>
+ <a href="/privacy.docx" target="_blank" style={footerLink}>
   Политика конфиденциальности
 </a>
 
-<a href="/consent.pdf" target="_blank" style={footerLink}>
+<a href="/consent.docx" target="_blank" style={footerLink}>
   Согласие на обработку персональных данных
+</a>
+
+<a href="/agreement.docx" target="_blank" style={footerLink}>
+  Пользовательское соглашение
+</a>
+
+<a href="/offer.docx" target="_blank" style={footerLink}>
+  Публичная оферта
+</a>
 </a>
             <p style={footerLink}>© {new Date().getFullYear()} ОПОРА</p>
           </div>
