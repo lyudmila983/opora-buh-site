@@ -61,15 +61,31 @@ export default function Home() {
           <h2 style={h2}>Записаться на консультацию</h2>
           <p style={lead}>Напишите, какая у вас задача: наставничество, консультация для бизнеса или подбор бухгалтера.</p>
           <div style={{ marginTop: '24px', display: 'grid', gap: '12px', fontSize: '18px' }}>
-            <p><strong>Телефон:</strong> +7 (___) ___-__-__</p>
-            <p><strong>Email:</strong> your-mail@example.ru</p>
-            <p><strong>WhatsApp / Telegram:</strong> укажите ваш контакт</p>
+            <p><strong>Телефон:</strong> +7 (906) 416-86-08</p>
+            <p><strong>Город:</strong> Таганрог</p>
+            <p><strong>MAX:</strong> +7 (906) 416-86-08</p>
           </div>
           <p style={{ marginTop: '24px', color: '#64748b' }}>
-            Здесь можно поставить кнопку на WhatsApp, Telegram или форму заявки.
+            Для связи используйте телефон или приложение MAX.
           </p>
         </div>
       </section>
+
+      <footer style={{ background: '#0f172a', color: '#cbd5e1', marginTop: '40px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '40px 24px' }}>
+          <h3 style={{ color: 'white', marginTop: 0 }}>Правовая информация</h3>
+          <p style={{ ...p, color: '#cbd5e1' }}>
+            Используя сайт, вы соглашаетесь с условиями обработки персональных данных.
+          </p>
+          <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginTop: '12px' }}>
+            <a href="#" style={{ color: '#93c5fd', textDecoration: 'none' }}>Политика конфиденциальности</a>
+            <a href="#" style={{ color: '#93c5fd', textDecoration: 'none' }}>Согласие на обработку персональных данных</a>
+          </div>
+          <p style={{ ...p, color: '#94a3b8', marginTop: '20px', fontSize: '14px' }}>
+            © {new Date().getFullYear()} Опора бухгалтеру. Все права защищены.
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
