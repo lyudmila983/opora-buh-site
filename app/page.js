@@ -140,8 +140,13 @@ export default function Home() {
           </div>
           <div>
             <h4 style={footerTitle}>Правовая информация</h4>
-            <p style={footerLink}>Политика конфиденциальности</p>
-            <p style={footerLink}>Согласие на обработку персональных данных</p>
+            <a href="/privacy.pdf" target="_blank" style={footerLink}>
+  Политика конфиденциальности
+</a>
+
+<a href="/consent.pdf" target="_blank" style={footerLink}>
+  Согласие на обработку персональных данных
+</a>
             <p style={footerLink}>© {new Date().getFullYear()} ОПОРА</p>
           </div>
         </div>
