@@ -3,6 +3,17 @@ export default function Home() {
     <main style={{ fontFamily: 'Arial, sans-serif', color: '#1f2937', background: '#f8fafc' }}>
       <section style={{ padding: '60px 24px', background: 'linear-gradient(135deg, #0f172a, #1e3a8a)', color: 'white' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+  <div style={{ marginBottom: '30px' }}>
+  <img
+    src="/logo.png"
+    alt="ОПОРА"
+    style={{
+      width: '220px',
+      height: 'auto',
+      display: 'block'
+    }}
+  />
+</div>
           <p style={{ fontSize: '16px', color: '#bfdbfe', marginBottom: '16px' }}>
             Наставничество • Бухгалтерские услуги • Помощь бизнесу
           </p>
